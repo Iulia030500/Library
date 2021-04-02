@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PersoaneController">
+   <children>
+      <TableView fx:id="persoane" layoutX="2.0" layoutY="44.0" prefHeight="200.0" prefWidth="889.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="47.19998025894165" text="ID" />
+          <TableColumn fx:id="nume" prefWidth="309.0" text="Nume" />
+          <TableColumn fx:id="cnp" minWidth="0.0" prefWidth="221.0" text="CNP" />
+          <TableColumn fx:id="carti" prefWidth="309.0" text="Carti" />
+        </columns>
+      </TableView>
+      <Button layoutX="108.0" layoutY="387.0" mnemonicParsing="false" onAction="#handlerCreate" prefHeight="43.0" prefWidth="69.0" text="Create" textFill="#8d1b1b">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font></Button>
+      <Button layoutX="108.0" layoutY="452.0" mnemonicParsing="false" onAction="#handlerUpdate" prefHeight="43.0" prefWidth="69.0" text="Update" textFill="#8d1b1b">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font></Button>
+      <Button layoutX="108.0" layoutY="516.0" mnemonicParsing="false" onAction="#handlerDelete" prefHeight="43.0" prefWidth="69.0" text="Delete" textFill="#8d1b1b">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font></Button>
+      <Button layoutX="637.0" layoutY="538.0" mnemonicParsing="false" onAction="#handlerExit" prefHeight="45.0" prefWidth="75.0" text="Back" textFill="#e10000">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font></Button>
+      <TextField fx:id="id_field" layoutX="170.0" layoutY="260.0" />
+      <TextField fx:id="nume_field" layoutX="170.0" layoutY="305.0" />
+      <TextField fx:id="cnp_field" layoutX="470.0" layoutY="260.0" />
+      <TextField fx:id="carti_field" layoutX="470.0" layoutY="305.0" />
+      <Label layoutX="133.0" layoutY="264.0" text="ID" />
+      <Label layoutX="117.0" layoutY="309.0" text="Nume" />
+      <Label layoutX="424.0" layoutY="264.0" text="CNP" />
+      <Label layoutX="424.0" layoutY="309.0" text="Carti" />
+      <TextField fx:id="search_nume" layoutX="48.0" layoutY="14.0" onKeyTyped="#handlerSearchNume" prefHeight="26.0" prefWidth="226.0" promptText="                     cauta dupa nume" />
+      <Button layoutX="266.0" layoutY="387.0" mnemonicParsing="false" onAction="#handlerSortare" prefHeight="43.0" prefWidth="275.0" text="Sortare dupa numar de carti imprumutate" textFill="#1c4c8c">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font></Button>
+      <Button layoutX="266.0" layoutY="452.0" mnemonicParsing="false" onAction="#handlerSortareId" prefHeight="43.0" prefWidth="275.0" text="Sortare dupa ID" textFill="#1c4c8c">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
